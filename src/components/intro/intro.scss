@@ -1,0 +1,172 @@
+@import "../../global.scss";
+
+.intro{
+    background-color: #23283e;
+    color: #bdbddd;
+
+    display: flex;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left{
+        flex: 0.5;
+        overflow: hidden;
+        .imgContainer{
+            overflow: hidden;
+            display: flex; 
+            align-items: flex-end;
+            justify-content:center ;
+            float: left;
+
+            @include mobile{
+                align-items: flex-start;
+                height: 150%;
+            }
+            img{
+                height: 95%;
+                @include mobile{
+                    //height: 15%;
+                }
+            }
+        }
+
+    }
+    .right{
+        flex: 0.5;
+        position: relative;
+        overflow: hidden;
+        padding-right: 100px;
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include mobile{
+               // padding-left: 0;
+                align-items: center;
+            }
+
+            h1{
+                font-family: 'Poppins',sans-serif;
+                font-size: 60px;
+                margin: 0;
+                @include mobile{
+                    font-size: 40px; 
+                    align-items: center;
+                }
+            }
+            h2{
+                font-family: 'Poppins',sans-serif;
+                font-size: 35px;
+                @include mobile{
+                    font-size: 30px; 
+                    align-items: center;
+                }
+            }
+            h3{
+                font-family: 'Poppins',sans-serif;
+                font-size: 30px;
+                span{
+                    font-size: inherit;
+                    color: #4880c4;
+                }
+                @include mobile{
+                    font-size: 15px; 
+                    align-items: center;
+                }
+
+            }
+            p{
+                font-family: 'Poppins',sans-serif;
+                font-size: 15px;
+                @include mobile{
+                    font-size: 10px; 
+                    align-items: center;
+                }
+            }
+        }
+
+
+        #turun{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            
+
+            img{
+                width: 30px;
+                animation: arrowBlink 2s infinite;
+
+
+    
+            }
+            @keyframes arrowBlink {
+                100%{
+                    opacity: 0;
+                }
+                
+            }
+        }
+        .btn {
+            width: 4vw;
+            margin-top: 2.4em;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            padding: 0.8em 1.4em;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: lowercase;
+            @include mobile{
+                width: 14vw;
+                text-align: center;
+                margin-top: 1em;
+                align-items: center;
+            }
+          }
+          .btn--outline {
+            text-decoration: none;
+            color:#90a0d9;
+            border: 2px solid #90a0d9;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+          }
+            .btn--outline:hover,
+            .btn--outline:focus {
+            text-decoration: none;
+             color: #fcfcfc;
+            }
+    
+    .btn--outline:before {
+      content: '';
+      text-decoration: none;
+      position: absolute;
+      background-color: #90a0d9;
+      right: 100%;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      transition: right 0.2s ease-in-out;
+    }
+    
+    .btn--outline:hover:before,
+    .btn--outline:focus:before {
+        text-decoration: none;
+      right: 0;
+    }
+    
+          .center {
+            display: flex;
+            align-items: center;
+          }
+    }
+}
