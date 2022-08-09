@@ -1,29 +1,31 @@
 import { useState } from "react";
 import "./work.scss"
 
+
+
 export default function Work() {
   const [currentSlide, setCurrentSlide]= useState(0)
   const data = [
     {
       id: "1",
-      icon: "./assets/www.png",
+      icon: process.env.PUBLIC_URL + '/assets/www.png',
       title: "Internship Application System",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img: "./assets/intern.png",
+      desc: "Website for universities student to apply internship and get approval from lecturers. Uses HTML and CSS with MySQL",
+      img: process.env.PUBLIC_URL + '/assets/intern.png',      
     },
     {
       id: "2",
-      icon: "./assets/smartphone.png",
+      icon: process.env.PUBLIC_URL + '/assets/smartphone.png',
       title: "Facilities Tracker",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img: "./assets/Banner.png",
+      desc: "Navigation mobile app to navigate facilities such as mosque and hotel. Uses Android Studio and Firebase",
+      img: process.env.PUBLIC_URL + '/assets/Banner.png',
     },
     {
       id: "3",
-      icon: "./assets/smartphone.png",
+      icon: process.env.PUBLIC_URL + '/assets/smartphone.png',
       title: "Palm Golf Resort Mobile Application",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img: "./assets/Banner.png",
+      desc: "Reservation and performance tracker mobile app for Palm Golf Resort Golfers. Uses VS Code and Firebase",
+      img: process.env.PUBLIC_URL + '/assets/palmgolf.png',
     },
   ];
 
@@ -46,7 +48,7 @@ export default function Work() {
                     </div>
                     <h2>{d.title}</h2>
                     <p>
-                    {d.desc}
+                      {d.desc}
                     </p>
                     <span>Projects</span>
                 </div>
@@ -58,8 +60,8 @@ export default function Work() {
         </div>
         ))}
      </div>
-        <img src="assets/down.png" className="arrow left" alt="" onClick={b =>handleClick("left")}/>
-        <img src="assets/down.png" className="arrow right" alt="" onClick={()=>handleClick()}/>
+        <img src={process.env.PUBLIC_URL + '/assets/down.png'} className= "arrow left"alt="" onClick={b =>handleClick("left")}/>
+        <img src={process.env.PUBLIC_URL + '/assets/down.png'} className="arrow right" alt="" onClick={()=>handleClick()}/>
 
     </div>
   );
